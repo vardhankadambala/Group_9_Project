@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <title>Lifestyle Store</title>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    </head>
+    <body id="BG" style="background-image: url('{% static 'img/life.png' %}');">
+        <div class="header">
+            <div class="innerhedder">
+                <div class="logo">
+                    <a href="{% url 'lifestyle' %}">Lifestyle Store</a>
+                </div>
+                <div class="headerlink">
+                    <a href="{% url 'signup' %}">Sign up</a>
+                </div>
+                <div class="headerlink">
+                    <a href="{% url 'login' %}">Login</a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            
+            <div class="bannerimage">
+                <div class="innerbannerimage">
+                    <center>
+                    <div class="bannercontent">
+                        <h1>We sell lifestyle</h1>
+            <p>Flat 40% OFF on premium brands</p>
+            <form>
+                <button type="button">
+                    Shop Now
+                </button>    
+            </form>
+                    </div>
+                    </center>
+                </div>     
+            </div>
+        </div>
+        <div class="container">
+            <div class="items">
+                <a href="{% url 'contin' %}">
+                    <img src="{% static 'img/camera.png' %}" class="thumbnail" >
+                    <div class="caption">
+                        <h2>Cameras</h2>
+                        <p>Choose among the best available in the world.</p>
+                    </div>
+                </a>
+            </div>
+        
+        
+        
+            <div class="items">
+                <a href="{% url 'contin' %}">
+                    <img src="{% static 'img/watch.png' %}" alt="Watches" class="thumbnail" >
+                    <div class="caption">
+                        <h2>Watches</h2>
+                        <p>Original watches from best brands.</p>
+                    </div>
+                </a>
+            </div>
+       
+        
+        
+            <div class="items">
+                <a href="{% url 'contin' %}">
+                    <img src="{% static 'img/shirt.png' %}" class="thumbnail" >
+                    <div class="caption">
+                        <h2>Shirts</h2>
+                        <p>Our exquisite collection of shirts.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <center>
+                    <p>Copyright © Lifestyle Store. All Rights Reserved | Contact Us: +91 90000 00000</p>
+                </center>
+                
+            </div>
+        </footer>
+        <div class="container">
+            {% block content %}
+
+            {% endblock %}  
+    </body>
+</html>
